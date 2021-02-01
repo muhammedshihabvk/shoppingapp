@@ -15,7 +15,7 @@ class SkuDetailsPage extends StatelessWidget {
       children: [
         Image.asset(
           skuImgLoc,
-          height: MediaQuery.of(context).size.height * .73,
+          height: MediaQuery.of(context).size.height * .68,
           fit: BoxFit.fitHeight,
         ),
         SizedBox(
@@ -33,7 +33,7 @@ class SkuDetailsPage extends StatelessWidget {
           child: Container(
             // padding: EdgeInsets.only(left: 10, right: 10),
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * .3,
+            height: MediaQuery.of(context).size.height * .4,
             decoration: BoxDecoration(
               color: Colors.blueGrey[500],
               borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -70,7 +70,8 @@ class SkuDetailsPage extends StatelessWidget {
                       ),
                       Divider(
                         color: Colors.white,
-                        thickness: 3,
+                        thickness: 1,
+
                       ),
                       SizedBox(
                         height: 10,
@@ -118,6 +119,28 @@ class SkuDetailsPage extends StatelessWidget {
                                 color: Colors.white),
                           ),
                         ],
+                      ),
+                      Divider(
+                        color: Colors.white,
+                        thickness: 1,
+                      ),
+                      ListTile(
+                        leading: Text("Details",style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white),),
+                      trailing: Icon(Icons.add,size: 30,color: Colors.white,),
+                      ),
+                      Divider(
+                        color: Colors.white,
+                        thickness: 1,
+                      ),
+                      ListTile(
+                        leading: Text("Shipping and Return",style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white),),
+                        trailing: Icon(Icons.add,size: 30,color: Colors.white,),
                       ),
                     ],
                   ),
