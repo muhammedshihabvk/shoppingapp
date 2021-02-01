@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shoppingapp/carouselSlider.dart';
+import 'package:shoppingapp/sections/bottonNavBar.dart';
 import 'package:shoppingapp/sections/headerNameSection.dart';
+import 'package:shoppingapp/sections/landscapSkuListView.dart';
 import 'package:shoppingapp/sections/topHorizontalMenueSection.dart';
 import 'package:shoppingapp/sections/trendListSection.dart';
-import 'package:shoppingapp/widgets/itemPostCard.dart';
-import 'assets.dart';
+import 'package:shoppingapp/sections/trendListSkuViewScroll.dart';
+import 'package:shoppingapp/widgets/lineBar.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,56 +54,19 @@ class MyApp extends StatelessWidget {
               TopHorizontalMenueSection(),
               CarouselSlider(),
               TrendListSection(),
-              SizedBox(
-                height: 30,
-                child: Center(
-                    child: Text(
-                  "New Trend",
-                  style: GoogleFonts.aclonica(
-                    // fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
-                )),
-              ),
+              TrendListSkuViewScroll(heading: "New Trend",),
+              LineBar(),
               Container(
-                height: 220,
-                padding: EdgeInsets.only(top: 12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  color: Colors.grey[200],
-                ),
-                child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      ItemPostCard(
-                          skuImage: keyChain1,
-                          skuName: "keychain dude",
-                          skuPrice: "30"),
-                      ItemPostCard(
-                          skuImage: candle1, skuName: "candle", skuPrice: "10"),
-                      ItemPostCard(
-                          skuImage: bed5, skuName: "candle", skuPrice: "200"),
-                      ItemPostCard(
-                          skuImage: keyChain4,
-                          skuName: "Key chain",
-                          skuPrice: "50"),
-                      ItemPostCard(
-                          skuImage: bed3,
-                          skuName: "Key chain",
-                          skuPrice: "450"),
-                      ItemPostCard(
-                          skuImage: bed4,
-                          skuName: "Key chain",
-                          skuPrice: "350"),
-                    ],
-                  ),
-                ),
-              ),
+                  height: 35,
+                  child: centreHeadingSection(headingText: "Offer Sale")),
+              LandscapSkuLIstView(),
+              TrendListSkuViewScroll(heading: "Holiday Special",),
+
             ],
           ),
-        ));
+          bottomNavigationBar: BottomNavBar(),
+
+        )
+    );
   }
 }
-

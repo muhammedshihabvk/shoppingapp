@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TrendListSection extends StatelessWidget {
@@ -5,16 +6,13 @@ class TrendListSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          mainSectionTopOption(
-              isSelected: true, textValue: "Candles"),
+          mainSectionTopOption(isSelected: true, textValue: "Can"),
           mainSectionTopOption(isSelected: true, textValue: "Bins"),
           mainSectionTopOption(isSelected: true, textValue: "Beds"),
-          mainSectionTopOption(
-              isSelected: true, textValue: "Mattresses"),
-          mainSectionTopOption(
-              isSelected: true, textValue: "Wardrobes"),
+          mainSectionTopOption(isSelected: true, textValue: "Mat"),
+          mainSectionTopOption(isSelected: true, textValue: "Wardrobes"),
         ],
       ),
     );
@@ -22,28 +20,32 @@ class TrendListSection extends StatelessWidget {
 }
 
 Widget mainSectionTopOption({bool isSelected, String textValue}) {
-  return Container(
-    margin: EdgeInsets.only(left: 5),
-    padding: EdgeInsets.all(10),
-    // color: Colors.deepOrange,
+  return FlatButton(
+    // materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+    minWidth: 40,
+    padding: EdgeInsets.all(0),
+    onPressed: () {
+      print("pressed on $textValue");
+    },
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
           textValue != null ? textValue : "N/a",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         SizedBox(
           height: 5,
         ),
         isSelected == true
             ? Icon(
-          Icons.circle,
-          size: 10,
-        )
+                Icons.circle,
+                size: 10,
+              )
             : SizedBox(),
       ],
     ),
   );
 }
-

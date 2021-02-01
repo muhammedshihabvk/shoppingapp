@@ -8,6 +8,7 @@ class TopHorizontalMenueSection extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10, top: 20,),
       margin: EdgeInsets.only(bottom: 20),
       child: ListView(
+        physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         children: [
           HomeTopRedButton(
