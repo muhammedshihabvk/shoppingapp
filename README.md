@@ -1,6 +1,8 @@
 # shoppingapp
 
 A new Flutter application.
+![Image description](sample1.PNG)
+![Image description](sample2.PNG)
 
 ## Getting Started
 
