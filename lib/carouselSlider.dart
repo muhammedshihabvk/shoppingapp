@@ -22,14 +22,9 @@ class CarouselSlider extends StatelessWidget {
           showIndicator: true,
           indicatorBgPadding: 7.0,
           images: [
-            FlatButton(
-              onPressed: () {
-                print("hello nework image");
-              },
-              child: Image.network(
-                "https://www.urbanwood.in/mobile/images/home/banner.jpg?v=6",
-                fit: BoxFit.cover,
-              ),
+            Image.network(
+              "https://pixabay.com/get/g35e390d7c29250912766db811342c11f1a1e743fdbc38184516e4098334b3faf98064a38ebd0ff1be33e8d630cfb77fe_1280.png",
+              fit: BoxFit.cover,
             ),
             Image.asset(
               bed1,

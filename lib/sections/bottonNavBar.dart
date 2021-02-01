@@ -3,21 +3,20 @@ import 'package:flutter/material.dart';
 class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double screemWidth = MediaQuery.of(context).size.width;
-    double screemHeight = MediaQuery.of(context).size.height;
+    // double screemHeight = MediaQuery.of(context).size.height;
 
     return Container(
-      width: screemWidth,
-      height: screemHeight * .09,
+      height: 60,
       decoration: BoxDecoration(
-        boxShadow: [BoxShadow(blurRadius: 15,spreadRadius: 1,color: Colors.blueGrey)],
+        // boxShadow: [BoxShadow(blurRadius: 15,spreadRadius: 1,color: Colors.blueGrey)],
         color: Colors.grey[300],
         // color: Colors.transparent,
 
         borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+            topLeft: Radius.circular(30), topRight: Radius.circular(30)),
       ),
       child: Row(
+
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           bottonNavIcon(iconNAme: Icons.person),
