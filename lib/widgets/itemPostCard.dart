@@ -17,7 +17,7 @@ class ItemPostCard extends StatelessWidget {
     onTap: () {
       // print("tapped on $skuName $skuPrice\$");
       Navigator.of(context).push(MaterialPageRoute(builder: (context){
-        return SkuDetailsPage(skuImgLoc: skuImage,favFlag: favFlag,);
+        return SkuDetailsPage(skuImgLoc: skuImage,favFlag: favFlag,skuPrice: skuPrice,skuName: skuName,);
       }));
     },
       child: Container(

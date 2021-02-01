@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class SkuDetailsPage extends StatelessWidget {
   String skuImgLoc;
   bool favFlag;
+  String skuPrice;
+  String skuName;
 
-  SkuDetailsPage({this.skuImgLoc, this.favFlag});
+  SkuDetailsPage({this.skuImgLoc, this.favFlag,this.skuPrice,this.skuName});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class SkuDetailsPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * .3,
             decoration: BoxDecoration(
-              color: Colors.blueGrey,
+              color: Colors.blueGrey[500],
               borderRadius: BorderRadius.all(Radius.circular(30)),
               // borderRadius: BorderRadius.only(
               //     topLeft: Radius.circular(30), topRight: Radius.circular(30),bottomLeft: Radius.circular(30)),
@@ -51,16 +53,16 @@ class SkuDetailsPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Sku name printed",
+                            "$skuName",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w800,
                                 color: Colors.white),
                           ),
                           Text(
-                            "30\$",
+                            "$skuPrice\$",
                             style: TextStyle(
-                                fontSize: 40,
+                                fontSize: 35,
                                 fontWeight: FontWeight.w800,
                                 color: Colors.white),
                           ),

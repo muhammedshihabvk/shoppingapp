@@ -22,7 +22,7 @@ class LandscapSkuLIstView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            LandscapItemPostCard(skuName: "Candle tree wan",skuImage: candle3,skuPrice: "20",),
+            LandscapItemPostCard(skuName: "Candle tree wan",skuImage: candle3,skuPrice: "20",favFlag: true,),
             LandscapItemPostCard(skuName: "Key Chain medon visk show case",skuImage: keyChain2,skuPrice: "50",),
             LandscapItemPostCard(skuName: "Candle medon visk",skuImage: candle4,skuPrice: "50",),
             LandscapItemPostCard(skuName: "Candle beer life",skuImage: candle1,skuPrice: "70",),

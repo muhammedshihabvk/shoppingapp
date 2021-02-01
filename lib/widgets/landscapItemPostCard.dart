@@ -6,8 +6,9 @@ class LandscapItemPostCard extends StatelessWidget {
   String skuImage;
   String skuName;
   String skuPrice;
+  bool favFlag;
 
-  LandscapItemPostCard({this.skuImage,this.skuPrice,this.skuName});
+  LandscapItemPostCard({this.skuImage,this.skuPrice,this.skuName,this.favFlag});
 
 
   @override
@@ -19,7 +20,7 @@ class LandscapItemPostCard extends StatelessWidget {
       onTap: () {
         // print("tapped on $skuName $skuPrice\$");
         Navigator.of(context).push(MaterialPageRoute(builder: (context){
-          return SkuDetailsPage(skuImgLoc: skuImage,);
+          return SkuDetailsPage(skuImgLoc: skuImage,skuName: skuName,skuPrice: skuPrice,favFlag: favFlag,);
         }));
       },
       child: Container(
