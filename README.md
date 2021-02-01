@@ -6,6 +6,8 @@ A new E-commerce Flutter application for learning purpose.
 ![Image description](sample1.PNG)
 ![Image description](sample2.PNG)
 ![Image description](sample3.PNG)
+![Image description](sample4.PNG)
+![Image description](sample5.PNG)
 
 ## Getting Started
 
