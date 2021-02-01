@@ -1,8 +1,11 @@
 # shoppingapp
 
-A new Flutter application.
+A new E-commerce Flutter application for learning purpose.
+
+
 ![Image description](sample1.PNG)
 ![Image description](sample2.PNG)
+![Image description](sample3.PNG)
 
 ## Getting Started
 
