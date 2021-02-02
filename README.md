@@ -4,6 +4,7 @@ A new E-commerce Flutter application for learning purpose.
 
 
 ![Image description](sample.gif =100x20)
+<img align="left" width="100" height="100" src="sample.gif">
 
 
 ![Image description](sample1.PNG)
