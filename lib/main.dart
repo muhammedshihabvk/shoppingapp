@@ -1,13 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shoppingapp/carouselSlider.dart';
+import 'package:shoppingapp/screens/myHomePage.dart';
 import 'package:shoppingapp/sections/bottonNavBar.dart';
-import 'package:shoppingapp/sections/headerNameSection.dart';
-import 'package:shoppingapp/sections/landscapSkuListView.dart';
-import 'package:shoppingapp/sections/topHorizontalMenueSection.dart';
-import 'package:shoppingapp/sections/trendListSection.dart';
-import 'package:shoppingapp/sections/trendListSkuViewScroll.dart';
-import 'package:shoppingapp/widgets/lineBar.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
+        // debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
             toolbarHeight: 60,
@@ -44,26 +38,11 @@ class MyApp extends StatelessWidget {
                       onPressed: () {
                         print("clicked on search button");
                       },
-                      child: Icon(Icons.search_rounded))),
+                      child: Icon(Icons.search_rounded))
+              ),
             ],
           ),
-          body: ListView(
-            physics: BouncingScrollPhysics(),
-            children: [
-              HeaderNameSection(),
-              TopHorizontalMenueSection(),
-              CarouselSlider(),
-              TrendListSection(),
-              TrendListSkuViewScroll(heading: "New Trend",),
-              LineBar(),
-              Container(
-                  height: 35,
-                  child: centreHeadingSection(headingText: "Offer Sale")),
-              LandscapSkuLIstView(),
-              TrendListSkuViewScroll(heading: "Holiday Special",),
-
-            ],
-          ),
+          body: MyHomePage(),
           bottomNavigationBar: BottomNavBar(),
 
         )
