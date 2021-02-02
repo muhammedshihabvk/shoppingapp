@@ -3,7 +3,7 @@
 A new E-commerce Flutter application for learning purpose.
 
 
-<img align="left" width="700" height="1250" src="sample.gif">
+<img align="left" width="350" height="650" src="sample.gif">
 
 
 ![Image description](sample1.PNG)
