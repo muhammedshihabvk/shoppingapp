@@ -3,7 +3,7 @@
 A new E-commerce Flutter application for learning purpose.
 
 
-![Image description](sample.gif)
+![Image description](sample.gif =100x20)
 
 
 ![Image description](sample1.PNG)
